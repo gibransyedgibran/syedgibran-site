@@ -587,3 +587,63 @@ a {
     gap: var(--space-md);
   }
 }
+
+/* ============================================
+   ABOUT PAGE
+============================================ */
+
+.about-hero {
+  padding-block: var(--space-2xl);
+}
+
+.about-hero__title {
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  margin-block: var(--space-md) var(--space-lg);
+  max-width: 16ch;
+}
+
+.about-section {
+  padding-block: var(--space-xl);
+}
+
+.about__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 52ch;
+}
+
+.about__body p {
+  max-width: 100%;
+}
+
+.about__highlight {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-lg);
+  color: var(--color-bone);
+  padding-left: var(--space-md);
+  border-left: 0.5px solid var(--color-gold);
+}
+
+.about-jabr__title {
+  font-size: clamp(var(--text-xl), 3.5vw, var(--text-3xl));
+  margin-block: var(--space-md) var(--space-lg);
+}
+
+.about-choice__title {
+  font-size: clamp(var(--text-xl), 3.5vw, var(--text-3xl));
+  margin-block: var(--space-md) var(--space-lg);
+  max-width: 22ch;
+}
+
+/* Gold crack — appears only on About page */
+.crack--gold {
+  color: var(--color-gold);
+  opacity: 0.6;
+}
+
+/* Active nav link */
+.nav__active {
+  color: var(--color-bone) !important;
+}
