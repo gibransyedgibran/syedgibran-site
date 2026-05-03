@@ -809,3 +809,278 @@ a {
   border-color: var(--color-gold);
   color: var(--color-gold);
 }
+
+/* ============================================
+   BLOG INDEX
+============================================ */
+
+.blog-header {
+  padding-block: var(--space-2xl);
+}
+
+.blog-header__title {
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  margin-block: var(--space-md) var(--space-lg);
+  max-width: 18ch;
+}
+
+.blog-header__body {
+  font-size: var(--text-base);
+  color: var(--color-muted);
+  max-width: 52ch;
+  line-height: 1.9;
+}
+
+.blog-list {
+  padding-block: var(--space-lg) var(--space-2xl);
+}
+
+.blog-list__grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card {
+  display: block;
+  text-decoration: none;
+  border-bottom: 0.5px solid var(--color-border);
+  transition: all 0.2s ease;
+}
+
+.blog-card:first-child {
+  border-top: 0.5px solid var(--color-border);
+}
+
+.blog-card__inner {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr auto;
+  gap: var(--space-md);
+  align-items: start;
+  padding-block: var(--space-lg);
+}
+
+.blog-card__number {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  letter-spacing: 0.08em;
+  opacity: 0.4;
+  padding-top: 0.25rem;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
+}
+
+.blog-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.blog-card__date {
+  font-size: var(--text-xs);
+  color: var(--color-muted);
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+}
+
+.blog-card__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-bone);
+  line-height: 1.3;
+  transition: color 0.2s ease;
+}
+
+.blog-card__excerpt {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  line-height: 1.75;
+  max-width: 52ch;
+  opacity: 0.7;
+}
+
+.blog-card__arrow {
+  color: var(--color-muted);
+  opacity: 0.3;
+  padding-top: 0.25rem;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.blog-card:hover .blog-card__title {
+  color: var(--color-gold);
+}
+
+.blog-card:hover .blog-card__number {
+  opacity: 1;
+  color: var(--color-gold);
+}
+
+.blog-card:hover .blog-card__arrow {
+  opacity: 1;
+  color: var(--color-gold);
+  transform: translateX(4px);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .blog-card__inner {
+    grid-template-columns: 1.5rem 1fr;
+  }
+
+  .blog-card__arrow {
+    display: none;
+  }
+}
+
+/* ============================================
+   CONTACT PAGE
+============================================ */
+
+.contact-header {
+  padding-block: var(--space-2xl);
+}
+
+.contact-header__title {
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  margin-block: var(--space-md) var(--space-lg);
+  max-width: 16ch;
+}
+
+.contact-header__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 52ch;
+}
+
+.contact-header__body p {
+  max-width: 100%;
+}
+
+.contact-form-section {
+  padding-block: var(--space-lg) var(--space-2xl);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  max-width: 480px;
+}
+
+.contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.contact-form__label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  opacity: 0.7;
+}
+
+.contact-form__input,
+.contact-form__textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 0.5px solid var(--color-border);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 300;
+  padding-block: var(--space-sm);
+  width: 100%;
+  transition: border-color 0.3s ease;
+  outline: none;
+  resize: none;
+}
+
+.contact-form__input::placeholder,
+.contact-form__textarea::placeholder {
+  color: var(--color-muted);
+  opacity: 0.4;
+  font-style: italic;
+}
+
+/* Override browser autofill styling */
+.contact-form__input:-webkit-autofill,
+.contact-form__textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #0d0c0a inset;
+  -webkit-text-fill-color: #e8e0d0;
+  caret-color: #e8e0d0;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.contact-form__input:-webkit-autofill:focus,
+.contact-form__textarea:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #0d0c0a inset;
+  -webkit-text-fill-color: #e8e0d0;
+}
+
+.contact-form__input:focus,
+.contact-form__textarea:focus {
+  border-bottom-color: var(--color-gold);
+}
+
+.contact-form__field:focus-within .contact-form__label {
+  color: var(--color-gold);
+  opacity: 1;
+}
+
+.contact-form__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0.5px solid var(--color-border);
+  color: var(--color-muted);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  padding: var(--space-sm) var(--space-lg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.contact-form__submit:hover {
+  border-color: var(--color-gold);
+  color: var(--color-bone);
+}
+
+/* ============================================
+   THANK YOU PAGE
+============================================ */
+
+.thankyou {
+  padding-block: var(--space-2xl);
+}
+
+.thankyou__title {
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  margin-block: var(--space-md) var(--space-lg);
+  max-width: 20ch;
+}
+
+.thankyou__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 52ch;
+}
+
+.thankyou__body p {
+  max-width: 100%;
+}
