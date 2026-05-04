@@ -122,13 +122,25 @@
       <section class="contact-form-section">
         <div class="container">
           <form
-            <input type="hidden" name="access_key" value="fd1ad569-8d5f-449d-9cea-37a1b6706835" />
-            <input type="hidden" name="redirect" value="https://syedgibran.com/thankyou/" />
-            <input type="hidden" name="subject" value="New message from syedgibran.com" />
             class="contact-form"
             action="https://api.web3forms.com/submit"
             method="POST"
           >
+            <input
+              type="hidden"
+              name="access_key"
+              value="fd1ad569-8d5f-449d-9cea-37a1b6706835"
+            />
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://syedgibran.com/thankyou/"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New message from syedgibran.com"
+            />
             <div class="contact-form__field">
               <label for="name" class="contact-form__label"> your name </label>
               <input
@@ -253,13 +265,13 @@
     </button>
 
     <script>
-  const btn = document.getElementById('scrollTop');
-  window.addEventListener('scroll', () => {
-    btn.classList.toggle('scroll-top--visible', window.scrollY > 400);
-  });
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
+      const btn = document.getElementById("scrollTop");
+      window.addEventListener("scroll", () => {
+        btn.classList.toggle("scroll-top--visible", window.scrollY > 400);
+      });
+      btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
   </body>
 </html>
