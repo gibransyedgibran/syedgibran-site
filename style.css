@@ -412,7 +412,7 @@ a {
   opacity: 0.5;
 }
 
-.post__title {
+.post__row-title {
   font-family: var(--font-serif);
   font-size: var(--text-lg);
   font-weight: 400;
@@ -430,7 +430,7 @@ a {
   opacity: 0.5;
 }
 
-.post__row:hover .post__title {
+.post__row:hover .post__row-title {
   color: var(--color-gold);
 }
 
@@ -1083,4 +1083,27 @@ a {
 
 .thankyou__body p {
   max-width: 100%;
+}
+
+/* ============================================
+   ACCESSIBILITY
+============================================ */
+
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: var(--space-sm);
+  background: var(--color-gold);
+  color: var(--color-bg);
+  font-size: var(--text-sm);
+  padding: var(--space-xs) var(--space-sm);
+  text-decoration: none;
+  z-index: 100;
+  transition: top 0.2s ease;
+  pointer-events: none;
+}
+
+.skip-nav:focus {
+  top: var(--space-sm);
+  pointer-events: auto;
 }

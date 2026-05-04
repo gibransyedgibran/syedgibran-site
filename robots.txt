@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /thankyou.html
+Disallow: /blog-post-template.html
+
+Sitemap: https://syedgibran.com/sitemap.xml
